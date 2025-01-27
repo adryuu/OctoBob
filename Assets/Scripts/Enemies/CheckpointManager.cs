@@ -18,6 +18,8 @@ public class CheckpointManager : MonoBehaviour
     private Transform _thirdCheckpoint;
     [SerializeField]
     private Transform _fourthCheckpoint;
+    [SerializeField]
+    private Transform _fifthCheckpoint;
 
     private void Awake()
     {
@@ -54,7 +56,7 @@ public class CheckpointManager : MonoBehaviour
         }
         else if (_player.position.x > _fourthCheckpoint.position.x)
         {
-            SetCheckpoint(_fourthCheckpoint);
+            SetCheckpoint(_fifthCheckpoint);
         }
     }
 
