@@ -12036,6 +12036,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.049
       objectReference: {fileID: 0}
+    - target: {fileID: 4363198196674953647, guid: d5fdfb5c9f9f8a64ba4ffd14eeac1406, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -464260246396984340, guid: b833408e8495ebf4ba542226a44616cd, type: 2}
     - target: {fileID: 4948534784453219967, guid: d5fdfb5c9f9f8a64ba4ffd14eeac1406, type: 3}
       propertyPath: _shootFillBar
       value: 
@@ -15682,6 +15686,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 69.2
       objectReference: {fileID: 0}
+    - target: {fileID: 7573966167428728617, guid: 2d226df30b065bb42a05b20c1ebf0d0a, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -6130664645140861216, guid: b833408e8495ebf4ba542226a44616cd, type: 2}
     - target: {fileID: 8475103973172580125, guid: 2d226df30b065bb42a05b20c1ebf0d0a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.17507342

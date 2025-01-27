@@ -457,7 +457,7 @@ AudioSource:
   m_GameObject: {fileID: 796450233}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -6130664645140861216, guid: b833408e8495ebf4ba542226a44616cd, type: 2}
   m_audioClip: {fileID: 8300000, guid: 80d31deef906452468642ed31d0e7c6e, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -745,8 +745,9 @@ MonoBehaviour:
 
 
     Sergio
+    Pampillon
 
-    (Pampi)
+    (PixelPamp)
 
 
     Nicolas
@@ -756,18 +757,18 @@ MonoBehaviour:
 
 
 
-    Direccion
-    Tecnica
+    Direccion Tecnica
 
 
-    Alejandro Dominguez Santos
+    Alejandro
+    Dominguez Santos
 
     (Panimaqui)
 
 
-    Adrian
+    Adrian Duran Sanchez
 
-    (NPI)'
+    (Adryu)'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a4ef81df3901ecb43ae03a07d30f3b28, type: 2}
   m_sharedMaterial: {fileID: 535744843107729563, guid: a4ef81df3901ecb43ae03a07d30f3b28, type: 2}
