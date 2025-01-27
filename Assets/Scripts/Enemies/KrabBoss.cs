@@ -138,7 +138,7 @@ public class GiantCrabBoss : MonoBehaviour
 
         if (_cameraManager != null && _bossCameraPoint != null)
         {
-            _cameraManager.SetStaticPoint(_bossCameraPoint.position, _cameraLerpSpeed);
+            _cameraManager.SetStaticPoint(_bossCameraPoint.position, _cameraLerpSpeed, 5.548842f);
         }
 
         Debug.Log("El jefe se ha activado. Música cambiada, objeto extra activado y cámara ajustada.");

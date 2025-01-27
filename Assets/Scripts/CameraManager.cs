@@ -32,6 +32,17 @@ public class CameraManager : MonoBehaviour
     private Vector3 _staticPointPosition;
     private float _staticLerpSpeed;
 
+    // Variables para cambiar progresivamente el tamaño de la cámara
+    private float _targetOrthographicSize; // Tamaño final deseado
+    private float _initialOrthographicSize; // Tamaño inicial
+    private Camera _camera;
+
+    private void Start()
+    {
+        _camera = GetComponent<Camera>();
+        _initialOrthographicSize = _camera.orthographicSize;
+    }
+
     private void LateUpdate()
     {
         // Si hay un punto estático activo, mover la cámara hacia ese punto.
@@ -70,14 +81,25 @@ public class CameraManager : MonoBehaviour
     {
         // Suaviza la posición de la cámara hacia el punto estático definido.
         transform.position = Vector3.Lerp(transform.position, _staticPointPosition, _staticLerpSpeed * Time.deltaTime);
+
+        // Cambia progresivamente el tamaño de la cámara hacia el tamaño deseado.
+        _camera.orthographicSize = Mathf.Lerp(_camera.orthographicSize, _targetOrthographicSize, _staticLerpSpeed * Time.deltaTime);
+
+        // Detener el movimiento una vez que alcance el objetivo
+        if (Vector3.Distance(transform.position, _staticPointPosition) < 0.01f &&
+            Mathf.Abs(_camera.orthographicSize - _targetOrthographicSize) < 0.01f)
+        {
+            _isStatic = false; // Finalizar el movimiento y cambio de tamaño
+        }
     }
 
-    public void SetStaticPoint(Vector3 position, float lerpSpeed)
+    public void SetStaticPoint(Vector3 position, float lerpSpeed, float size)
     {
-        // Configura la cámara para moverse hacia un punto fijo con suavizado.
+        // Configura la cámara para moverse hacia un punto fijo con suavizado y cambiar el tamaño.
         _isStatic = true;
         _staticPointPosition = position;
         _staticLerpSpeed = lerpSpeed;
+        _targetOrthographicSize = size;
     }
 
     public void ReleaseStaticPoint()
