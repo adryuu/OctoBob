@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -28,6 +29,14 @@ public class PlayerMovement : MonoBehaviour
     private Transform _shootPoint;
     [SerializeField]
     private float _cadence;
+    [SerializeField]
+    private Image _shootFillBar;
+    [SerializeField]
+    private GameObject _shootFillBarGameObject;
+    [SerializeField]
+    private Image _chargeBarBackGround;
+    [SerializeField]
+    private Sprite _completeChargedBar;
 
     [Header("Detección de Suelo")]
     [SerializeField]
@@ -87,17 +96,22 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Z))
         {
             _chargeTime = 0f;
-           
+           _shootFillBarGameObject.SetActive(true);
         }
 
         // Incrementar carga mientras el botón esté pulsado (máximo 2 segundos)
         if (Input.GetKey(KeyCode.Z))
         {
+            _shootFillBar.fillAmount = _chargeTime / 2f;
+            if(_chargeTime == 2f)
+            {
+                _chargeBarBackGround.sprite = _completeChargedBar;
+            }
             _chargeTime += Time.deltaTime;
-            _chargeTime = Mathf.Min(_chargeTime, 2f); // Limitar la carga a 2 segundos
+            _chargeTime = Mathf.Min(_chargeTime, 2f);
             if(_chargeTime >= 0.8f)
             {
-                _anim.SetBool("isCharging", true); // Activar animación de carga en bucle
+                _anim.SetBool("isCharging", true);
             }
             // Calcular la fuerza actual de retroceso (entre 2 y _maxRecoilForce)
             _currentRecoilForce = Mathf.Lerp(2f, _maxRecoilForce, _chargeTime / 2f);
@@ -106,6 +120,7 @@ public class PlayerMovement : MonoBehaviour
         // Disparar al soltar el botón
         if (Input.GetKeyUp(KeyCode.Z))
         {
+            _shootFillBarGameObject.SetActive(false);
             _anim.SetBool("isCharging", false); // Detener animación de carga
             StartCoroutine(Shoot());
         }
@@ -173,12 +188,18 @@ public class PlayerMovement : MonoBehaviour
 
         // Instanciar el proyectil
         GameObject projectile = Instantiate(_proyectilePrefab, _shootPoint.position, Quaternion.identity);
+
+        // Ajustar el tamaño del proyectil en función del tiempo de carga
+        float scaleMultiplier = Mathf.Lerp(1f, 2f, _chargeTime / 2f); // Escala proporcional a la carga (1x a 2x)
+        projectile.transform.localScale = new Vector3(scaleMultiplier, scaleMultiplier, 1f);
+
         projectile.GetComponent<Proyectile>().Direction = _shootDirection;
         projectile.GetComponent<Proyectile>().Speed = _shootForce;
 
         yield return new WaitForSeconds(_cadence);
         _canShoot = true;
     }
+
 
     private void CheckGround()
     {
