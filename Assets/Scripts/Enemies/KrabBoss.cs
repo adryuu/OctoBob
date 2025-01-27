@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using UnityEngine.UI;
 
 public class GiantCrabBoss : MonoBehaviour
 {
@@ -16,11 +17,12 @@ public class GiantCrabBoss : MonoBehaviour
     private float _tier2PassHealth = 10f;
     [SerializeField]
     private float _currentHealth;
+    [SerializeField]
+    private Image _healtbar;
 
     [Header("Movimiento Aleatorio")]
     [SerializeField]
     private float _movementSpeed = 2f;
-    //Tiempo sin atacar
     [SerializeField]
     private float _idleTime = 2f;
     [SerializeField]
@@ -28,7 +30,6 @@ public class GiantCrabBoss : MonoBehaviour
     private Vector3 _spawnPosition;
     private bool _isMoving = false;
     private bool _canMove = true;
-    //Dirección de movimiento incial
     private bool _movingRight = true;
 
     [Header("Ataques")]
@@ -56,20 +57,32 @@ public class GiantCrabBoss : MonoBehaviour
     private float _attackInterval = 5f;
     [SerializeField]
     private float _pincherMoveSpeed = 3f;
+
     [Header("Activación de Colliders")]
-    //Índice para activar los colliders en fase 1
     [SerializeField]
     private int _phase1ColliderIndex;
-    //Índice para activar los colliders en fase 2
     [SerializeField]
     private int _phase2ColliderIndex;
-    //Índice para activar los colliders en fase 3
     [SerializeField]
-    private int _phase3ColliderIndex; 
+    private int _phase3ColliderIndex;
 
+    [Header("Activación del Jefe")]
+    [SerializeField]
+    private GameObject _musicManager; // Referencia al MusicManager
+    [SerializeField]
+    private AudioClip _bossMusicName; // Nombre de la música del jefe
+    [SerializeField]
+    private GameObject _extraObject; // Objeto que se activará al inicio del jefe
+    [SerializeField]
+    private CameraManager _cameraManager; // Referencia al CameraManager
+    [SerializeField]
+    private Transform _bossCameraPoint; // Punto fijo para la cámara
+    [SerializeField]
+    private float _cameraLerpSpeed = 0.1f; // Velocidad de suavizado de la cámara
 
     private int _currentPhase = 1;
     private bool _isAttacking = false;
+    private bool _isBossActive = false; // Indica si el jefe está activo
 
     private void Start()
     {
@@ -81,20 +94,60 @@ public class GiantCrabBoss : MonoBehaviour
         _rightPincherCollider.enabled = false;
 
         InvokeRepeating(nameof(ExecuteAttack), _attackInterval, _attackInterval);
+
+        // Desactivar el objeto extra al inicio
+        if (_extraObject != null)
+        {
+            _extraObject.SetActive(false);
+        }
     }
 
     private void Update()
     {
+        // Activar el jefe si no está activo
+        if (!_isBossActive)
+        {
+            ActivateBoss();
+        }
+
+        _healtbar.fillAmount = _currentHealth / _maxHealth;
         HandlePhases();
 
         // Movimiento aleatorio si no está atacando y puede moverse
         if (!_isAttacking && _canMove)
         {
-            if (!_isMoving) // Asegurarse de no iniciar un nuevo movimiento si ya está en movimiento
+            if (!_isMoving)
             {
                 RandomMovement();
             }
         }
+    }
+
+    private void ActivateBoss()
+    {
+        _isBossActive = true;
+
+        // Cambiar la música a la música del jefe
+        if (_musicManager != null)
+        {
+            AudioSource audioManager = _musicManager.GetComponent<AudioSource>();
+            audioManager.clip = _bossMusicName;
+            audioManager.Play();
+        }
+
+        // Activar el objeto extra
+        if (_extraObject != null)
+        {
+            _extraObject.SetActive(true);
+        }
+
+        // Fijar la cámara en el punto del jefe
+        if (_cameraManager != null && _bossCameraPoint != null)
+        {
+            _cameraManager.SetStaticPoint(_bossCameraPoint.position, _cameraLerpSpeed);
+        }
+
+        Debug.Log("El jefe se ha activado. Música cambiada, objeto extra activado y cámara ajustada.");
     }
 
     private void HandlePhases()
@@ -115,46 +168,36 @@ public class GiantCrabBoss : MonoBehaviour
     {
         _isMoving = true;
 
-        // Determinar la dirección y calcular el nuevo objetivo
         float targetX = _movingRight
-            ? transform.position.x + Random.Range(1f, _movementRange) // Moverse hacia la derecha
-            : transform.position.x - Random.Range(1f, _movementRange); // Moverse hacia la izquierda
+            ? transform.position.x + Random.Range(1f, _movementRange)
+            : transform.position.x - Random.Range(1f, _movementRange);
 
-        // Asegurar que el objetivo esté dentro del rango permitido
         targetX = Mathf.Clamp(targetX, _spawnPosition.x - _movementRange, _spawnPosition.x + _movementRange);
 
         Vector3 targetPosition = new Vector3(targetX, transform.position.y, transform.position.z);
-
-        // Iniciar el movimiento hacia el objetivo
         StartCoroutine(MoveToPosition(targetPosition));
     }
 
     private IEnumerator MoveToPosition(Vector3 targetPosition)
     {
-        // Movimiento hacia el objetivo
         while (Vector3.Distance(transform.position, targetPosition) > 0.1f)
         {
             transform.position = Vector3.MoveTowards(transform.position, targetPosition, _movementSpeed * Time.deltaTime);
             yield return null;
         }
 
-        // Cambiar dirección si alcanza un límite
         if (Mathf.Abs(transform.position.x - (_spawnPosition.x + _movementRange)) < 0.1f)
         {
-            _movingRight = false; // Cambiar a moverse hacia la izquierda
+            _movingRight = false;
         }
         else if (Mathf.Abs(transform.position.x - (_spawnPosition.x - _movementRange)) < 0.1f)
         {
-            _movingRight = true; // Cambiar a moverse hacia la derecha
+            _movingRight = true;
         }
 
-        // Pausar antes de moverse nuevamente
         yield return new WaitForSeconds(_idleTime);
-
-        // Habilitar movimiento nuevamente
         _isMoving = false;
     }
-
 
     private void ExecuteAttack()
     {
@@ -162,21 +205,18 @@ public class GiantCrabBoss : MonoBehaviour
 
         _isAttacking = true;
 
-        // Detener el movimiento medio segundo antes del ataque
         _canMove = false;
         Invoke(nameof(StartAttack), 0.5f);
     }
 
     private void StartAttack()
     {
-        // Seleccionar arrays de ataque según la fase actual
         GameObject[] leftPincherPath = _currentPhase == 1 ? _attackPhase1LeftPincher :
                                        _currentPhase == 2 ? _attackPhase2LeftPincher : _attackPhase3LeftPincher;
 
         GameObject[] rightPincherPath = _currentPhase == 1 ? _attackPhase1RightPincher :
                                         _currentPhase == 2 ? _attackPhase2RightPincher : _attackPhase3RightPincher;
 
-        // Activar colliders de las pinzas
         _leftPincherCollider.enabled = true;
         _rightPincherCollider.enabled = true;
 
@@ -206,7 +246,6 @@ public class GiantCrabBoss : MonoBehaviour
                 yield return null;
             }
 
-            // Activar colliders en el índice correcto
             if (i == colliderActivationIndex)
             {
                 _leftPincherCollider.enabled = true;
@@ -216,14 +255,12 @@ public class GiantCrabBoss : MonoBehaviour
 
         yield return new WaitForSeconds(0.5f);
 
-        // Desactivar los colliders después de finalizar el ataque
         _leftPincherCollider.enabled = false;
         _rightPincherCollider.enabled = false;
 
         _isAttacking = false;
-        _canMove = true; // Permitir que el cangrejo se mueva de nuevo
+        _canMove = true;
     }
-
 
     public void TakeDamage(float damage)
     {

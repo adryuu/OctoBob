@@ -25,11 +25,23 @@ public class CameraManager : MonoBehaviour
     // Punto de cámara estática actual (si existe).
     private GameObject _currentStaticPoint = null;
 
+    // Indica si la cámara está en un punto estático
+    private bool _isStatic = false;
+
+    // Posición estática de la cámara y velocidad de suavizado
+    private Vector3 _staticPointPosition;
+    private float _staticLerpSpeed;
+
     private void LateUpdate()
     {
-        // Si hay un punto estático activo, la cámara queda fija ahí.
-        if (_currentStaticPoint != null)
+        // Si hay un punto estático activo, mover la cámara hacia ese punto.
+        if (_isStatic)
         {
+            MoveToStaticPoint();
+        }
+        else if (_currentStaticPoint != null)
+        {
+            // Si hay un punto estático activo (del array), la cámara queda fija ahí.
             Vector3 staticPosition = _currentStaticPoint.transform.position;
             transform.position = new Vector3(staticPosition.x + _xOffset, staticPosition.y + _yOffset, transform.position.z);
         }
@@ -42,20 +54,37 @@ public class CameraManager : MonoBehaviour
 
     private void FollowPlayer()
     {
-        // Posición deseada: posición del jugador más el desplazamiento en X.
+        // Posición deseada: posición del jugador más el desplazamiento en X y Y.
         float desiredX = _player.position.x + _xOffset;
-
-        // Suavizamos el movimiento de la cámara hacia la posición deseada en X.
-        float smoothedX = Mathf.Lerp(transform.position.x, desiredX, _smoothSpeed);
-
-        // Posición deseada: posición del jugador más el desplazamiento en Y.
         float desiredY = _player.position.y + _yOffset;
 
-        // Suavizamos el movimiento de la cámara hacia la posición deseada en Y.
+        // Suavizamos el movimiento de la cámara hacia la posición deseada.
+        float smoothedX = Mathf.Lerp(transform.position.x, desiredX, _smoothSpeed);
         float smoothedY = Mathf.Lerp(transform.position.y, desiredY, _smoothSpeed);
 
         // Actualizamos la posición de la cámara.
         transform.position = new Vector3(smoothedX, smoothedY, transform.position.z);
+    }
+
+    private void MoveToStaticPoint()
+    {
+        // Suaviza la posición de la cámara hacia el punto estático definido.
+        transform.position = Vector3.Lerp(transform.position, _staticPointPosition, _staticLerpSpeed * Time.deltaTime);
+    }
+
+    public void SetStaticPoint(Vector3 position, float lerpSpeed)
+    {
+        // Configura la cámara para moverse hacia un punto fijo con suavizado.
+        _isStatic = true;
+        _staticPointPosition = position;
+        _staticLerpSpeed = lerpSpeed;
+    }
+
+    public void ReleaseStaticPoint()
+    {
+        // Libera la cámara del punto estático y vuelve al seguimiento del jugador.
+        _isStatic = false;
+        _currentStaticPoint = null;
     }
 
     public void CheckStaticPoints()

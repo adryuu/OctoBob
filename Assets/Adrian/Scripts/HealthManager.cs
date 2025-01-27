@@ -11,8 +11,6 @@ public class HealthManager : MonoBehaviour
     private PauseMenu gameOverMenu;
     /*[SerializeField]
     SceneManager sceneManager;*/
-    //Array de sprites de la barra de salud
-    public Animator[] health;
     //Imagen de la barra de salud
     public Animator healthBar;
     //Numero de salud actual
@@ -20,6 +18,7 @@ public class HealthManager : MonoBehaviour
     //Numero de vida actual
     int life;
 
+    private float _actualHealth;
     [SerializeField]
     private GameObject _player;
     private Color _savedColor;
@@ -50,45 +49,10 @@ public class HealthManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ActualLife();
-        //Sprite actual de la barra de salud
-        health[PlayerPrefs.GetInt("Salud")].gameObject.SetActive(true);
-        healthBar = health[PlayerPrefs.GetInt("Salud")];
-
+        healthBar.SetInteger("Health", PlayerPrefs.GetInt("Salud"));
+        _actualHealth = PlayerPrefs.GetInt("Salud");
         life = PlayerPrefs.GetInt("Vidas");
         lifeText.text = life.ToString();
-    }
-
-    private void ActualLife()
-    {
-        if (healthcount == 1)
-        {
-            healthBar = health[healthcount];
-            health[0].gameObject.SetActive(false);
-            health[1].gameObject.SetActive(false);
-            health[2].gameObject.SetActive(false);
-        }
-        if (healthcount == 2)
-        {
-            healthBar = health[healthcount];
-            health[0].gameObject.SetActive(false);
-            health[1].gameObject.SetActive(false);
-            health[3].gameObject.SetActive(false);
-        }
-        if (healthcount == 3)
-        {
-            healthBar = health[healthcount];
-            health[0].gameObject.SetActive(false);
-            health[2].gameObject.SetActive(false);
-            health[3].gameObject.SetActive(false);
-        }
-        if (healthcount == 4)
-        {
-            healthBar = health[healthcount];
-            health[1].gameObject.SetActive(false);
-            health[2].gameObject.SetActive(false);
-            health[3].gameObject.SetActive(false);
-        }
     }
 
     //Método de perder salud
