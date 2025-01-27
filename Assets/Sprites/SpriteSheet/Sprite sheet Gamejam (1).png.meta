@@ -1,0 +1,972 @@
+fileFormatVersion: 2
+guid: c1ce4e53c7eb06846ab7d0c6d6942bbe
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Sprite sheet Gamejam (1)_0
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 224
+        width: 23
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0629e4305c08b694ea43f9f06585a9b2
+      internalID: -317642667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite sheet Gamejam (1)_1
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 224
+        width: 23
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 146617e9abb63724bade6c1da4e1a0a4
+      internalID: -1230192662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite sheet Gamejam (1)_2
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 223
+        width: 23
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6750fd9191caddb46ac7c4935965f594
+      internalID: -1543450900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite sheet Gamejam (1)_3
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 223
+        width: 23
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0af1ff0727be364d93130ef836c1243
+      internalID: -510625715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite sheet Gamejam (1)_4
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 223
+        width: 23
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a8c78a410af2d14ca88065daec54b77
+      internalID: 731537459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite sheet Gamejam (1)_5
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 249
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f54e751f4f605b84d99b5560a13f05b0
+      internalID: 1518260020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite sheet Gamejam (1)_6
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 248
+        width: 23
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e98a07dcf9065445911e8ed3a94e493
+      internalID: -1178867824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite sheet Gamejam (1)_7
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 244
+        width: 48
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b66e200b6aa19d43bacbfaae3102942
+      internalID: -383315262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite sheet Gamejam (1)_8
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 247
+        width: 26
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fb5db8221215934c8f6dbad348df0ed
+      internalID: 1189442045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite sheet Gamejam (1)_9
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 236
+        width: 5
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 580e4803ff84716409e5559aeef46422
+      internalID: 1756666448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite sheet Gamejam (1)_10
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 236
+        width: 5
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b1322b2dccf397498aff1cac0de4f8f
+      internalID: -42809056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite sheet Gamejam (1)_11
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 234
+        width: 6
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3925ffaee8c0d240897d3fb8a33b838
+      internalID: -82832819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite sheet Gamejam (1)_12
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 235
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d7ba09700720dc4399a63b24cb35900
+      internalID: -1656123997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite sheet Gamejam (1)_13
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 210
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e2fe35fbd087c4418dc1004afa34f5d
+      internalID: -44729188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite sheet Gamejam (1)_14
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 211
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c2cb1d76d251f94299aaf73fb2fb954
+      internalID: -529889510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite sheet Gamejam (1)_15
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 211
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fb8b1b8ce5adeb43a386cc5279f38ce
+      internalID: -1817408428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite sheet Gamejam (1)_16
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 211
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1770dd10cf4ca0f4bb11e013826bfa70
+      internalID: -878814378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite sheet Gamejam (1)_17
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 215
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 230ce14127ffcba44889af4012a99c81
+      internalID: -1839411379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite sheet Gamejam (1)_18
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 215
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58a83525b8f580942befa060fed943cc
+      internalID: 1872827359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite sheet Gamejam (1)_19
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 207
+        width: 5
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e1d1b7a159871f479f5b353ee6ccb86
+      internalID: 1042305941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite sheet Gamejam (1)_20
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 202
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86f744ce82c1f554b8e7f942f5207e4e
+      internalID: 737066416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite sheet Gamejam (1)_21
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 159
+        width: 18
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbaf167a8358d0849a95f7696f638d61
+      internalID: 1646767256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite sheet Gamejam (1)_22
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 160
+        width: 16
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 369c96837410d084dac7e948f6a8e705
+      internalID: 1411036006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite sheet Gamejam (1)_23
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 160
+        width: 14
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94ce994bb23651a4da48158d99dfd6b3
+      internalID: -934093002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite sheet Gamejam (1)_24
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 160
+        width: 11
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b65f1bea4be68249aa5ccf74b99fbff
+      internalID: 329220342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite sheet Gamejam (1)_25
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 160
+        width: 11
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cc7701b29f1cb145bcf49aebc6b2a8d
+      internalID: -200558197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite sheet Gamejam (1)_26
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 160
+        width: 12
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9833927be1c5cf4aaeeedfafa3f1f97
+      internalID: 587360402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite sheet Gamejam (1)_27
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 160
+        width: 16
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 040c84b51d5992045b1006cfced7cb8c
+      internalID: 60737956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite sheet Gamejam (1)_28
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 160
+        width: 18
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9928621930d4c9f40a0c3c439b8345a4
+      internalID: 1517610479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite sheet Gamejam (1)_29
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 162
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f651f6dcf23959849a5e9e8b1fbcc41c
+      internalID: 2100801728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite sheet Gamejam (1)_30
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 162
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6a12ae99a78b3047b0490e562a76d21
+      internalID: 618423309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite sheet Gamejam (1)_31
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 162
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16441cd92d5fd6f488d1c8f9760361e8
+      internalID: -609427560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite sheet Gamejam (1)_32
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 162
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2155652256ddd4e45a9374fdcea8a2db
+      internalID: 466169794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite sheet Gamejam (1)_33
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 162
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 897502d9e831df44086ece044f31fe03
+      internalID: 2103441874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite sheet Gamejam (1)_34
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 162
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b1a829a690f06f49981a9c5c1b29b2c
+      internalID: -509959326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite sheet Gamejam (1)_35
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 162
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6459246ea16abb14b904855e4e045fb9
+      internalID: 1426285815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite sheet Gamejam (1)_36
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 162
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2c4a741bf3723348adb01eb78bdbf4f
+      internalID: 96465019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite sheet Gamejam (1)_37
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 104
+        width: 293
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44900abd25e24674f877dee64cd0b6d5
+      internalID: -1897594199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite sheet Gamejam (1)_38
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 175
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3ded278bbc0b4b42aabdd7e39f26cf4
+      internalID: -1673031098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Sprite sheet Gamejam (1)_0: -317642667
+      Sprite sheet Gamejam (1)_1: -1230192662
+      Sprite sheet Gamejam (1)_10: -42809056
+      Sprite sheet Gamejam (1)_11: -82832819
+      Sprite sheet Gamejam (1)_12: -1656123997
+      Sprite sheet Gamejam (1)_13: -44729188
+      Sprite sheet Gamejam (1)_14: -529889510
+      Sprite sheet Gamejam (1)_15: -1817408428
+      Sprite sheet Gamejam (1)_16: -878814378
+      Sprite sheet Gamejam (1)_17: -1839411379
+      Sprite sheet Gamejam (1)_18: 1872827359
+      Sprite sheet Gamejam (1)_19: 1042305941
+      Sprite sheet Gamejam (1)_2: -1543450900
+      Sprite sheet Gamejam (1)_20: 737066416
+      Sprite sheet Gamejam (1)_21: 1646767256
+      Sprite sheet Gamejam (1)_22: 1411036006
+      Sprite sheet Gamejam (1)_23: -934093002
+      Sprite sheet Gamejam (1)_24: 329220342
+      Sprite sheet Gamejam (1)_25: -200558197
+      Sprite sheet Gamejam (1)_26: 587360402
+      Sprite sheet Gamejam (1)_27: 60737956
+      Sprite sheet Gamejam (1)_28: 1517610479
+      Sprite sheet Gamejam (1)_29: 2100801728
+      Sprite sheet Gamejam (1)_3: -510625715
+      Sprite sheet Gamejam (1)_30: 618423309
+      Sprite sheet Gamejam (1)_31: -609427560
+      Sprite sheet Gamejam (1)_32: 466169794
+      Sprite sheet Gamejam (1)_33: 2103441874
+      Sprite sheet Gamejam (1)_34: -509959326
+      Sprite sheet Gamejam (1)_35: 1426285815
+      Sprite sheet Gamejam (1)_36: 96465019
+      Sprite sheet Gamejam (1)_37: -1897594199
+      Sprite sheet Gamejam (1)_38: -1673031098
+      Sprite sheet Gamejam (1)_4: 731537459
+      Sprite sheet Gamejam (1)_5: 1518260020
+      Sprite sheet Gamejam (1)_6: -1178867824
+      Sprite sheet Gamejam (1)_7: -383315262
+      Sprite sheet Gamejam (1)_8: 1189442045
+      Sprite sheet Gamejam (1)_9: 1756666448
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
