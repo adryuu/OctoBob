@@ -41,5 +41,10 @@ public class Proyectile : MonoBehaviour
             _anim.SetTrigger("Impact");
             Destroy(this.gameObject, _timeToDestroy);
         }
+        if (infoCollision.gameObject.CompareTag("Boss"))
+        {
+            _anim.SetTrigger("Impact");
+            Destroy(this.gameObject, _timeToDestroy);
+        }
     }
 }

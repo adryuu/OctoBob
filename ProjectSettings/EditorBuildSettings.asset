@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Adrian/Scenes/MenuPrincipal.unity
+    path: Assets/Scenes/MenuPrincipal.unity
     guid: 2b70fb6f5ca055e4a921b98c080f6b70
   - enabled: 1
     path: Assets/Scenes/Muelle.unity

@@ -12,9 +12,9 @@ public class HealthManager : MonoBehaviour
     /*[SerializeField]
     SceneManager sceneManager;*/
     //Array de sprites de la barra de salud
-    public Sprite[] health;
+    public Animator[] health;
     //Imagen de la barra de salud
-    public Image healthBar;
+    public Animator healthBar;
     //Numero de salud actual
     private int healthcount;
     //Numero de vida actual
@@ -50,10 +50,45 @@ public class HealthManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        ActualLife();
         //Sprite actual de la barra de salud
-        healthBar.sprite = health[PlayerPrefs.GetInt("Salud")];
+        health[PlayerPrefs.GetInt("Salud")].gameObject.SetActive(true);
+        healthBar = health[PlayerPrefs.GetInt("Salud")];
+
         life = PlayerPrefs.GetInt("Vidas");
         lifeText.text = life.ToString();
+    }
+
+    private void ActualLife()
+    {
+        if (healthcount == 1)
+        {
+            healthBar = health[healthcount];
+            health[0].gameObject.SetActive(false);
+            health[1].gameObject.SetActive(false);
+            health[2].gameObject.SetActive(false);
+        }
+        if (healthcount == 2)
+        {
+            healthBar = health[healthcount];
+            health[0].gameObject.SetActive(false);
+            health[1].gameObject.SetActive(false);
+            health[3].gameObject.SetActive(false);
+        }
+        if (healthcount == 3)
+        {
+            healthBar = health[healthcount];
+            health[0].gameObject.SetActive(false);
+            health[2].gameObject.SetActive(false);
+            health[3].gameObject.SetActive(false);
+        }
+        if (healthcount == 4)
+        {
+            healthBar = health[healthcount];
+            health[1].gameObject.SetActive(false);
+            health[2].gameObject.SetActive(false);
+            health[3].gameObject.SetActive(false);
+        }
     }
 
     //Método de perder salud
